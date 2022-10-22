@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+</head>
+
+<body>
+    <h1>Display data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>name</td>
+                <td>name</td>
+                <td>name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% user.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.name %>
+                    </td>
+                    <td>
+                        <%= row.email %>
+                    </td>
+                    <td>
+                        <img src="<%= row.image %>" alt="" width="150">
+                    </td>
+                    <td>
+                        <a href="/delete/<%= row.id %>">delete</a>
+                    </td>
+                </tr>
+        </tbody>
+        <% }) %>
+    </table>
+</body>
+
+</html>
